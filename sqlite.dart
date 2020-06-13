@@ -27,7 +27,7 @@ class Sqlite {
 
   deteteBook(String id) async {
     final Database db = await database;
-    String sql = "DELETE tblbook WHERE id='" + id + "'";
+    String sql = "DELETE FROM tblbook WHERE id='" + id + "'";
     var value = await db.rawDelete(sql);
     return value;
   }
